@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/', multer().single('image'), async (req, res) => {
+app.post('/', multer().single('file'), async (req, res) => {
   const storage = new Storage({
     projectId: process.env.GCLOUD_PROJECT_ID
   });
